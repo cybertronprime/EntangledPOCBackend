@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@getpara/server-sdk": "^1.0.0",
+    "@lit-protocol/constants": "^2.2.0",
     "@lit-protocol/lit-node-client": "^2.2.0",
     "axios": "^1.5.0",
     "cors": "^2.8.5",

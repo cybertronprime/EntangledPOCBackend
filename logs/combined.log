@@ -1482,3 +1482,474 @@
 {"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:06:15"}
 {"level":"info","message":"✅ CRON JOB COMPLETED in 14992ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:06:15"}
 {"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:06:15"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:38:00.650Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:00"}
+{"level":"info","message":"📦 Current block: 45463902","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:09"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:09"}
+{"level":"info","message":"  🕐 Auction 3: Active (16483 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:10"}
+{"level":"info","message":"  🕐 Auction 4: Active (16798 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:10"}
+{"level":"info","message":"  🕐 Auction 5: Active (276197 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:11"}
+{"level":"info","message":"  🕐 Auction 6: Active (190323 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:12"}
+{"level":"info","message":"  🕐 Auction 7: Active (17631 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:12"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:13"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:13"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 12564ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:13"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:13"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"Meeting room created: vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/auction-jwt-test-123-1756615123147 (expires: Sun Aug 31 2025 10:38:43 GMT+0530 (India Standard Time))","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"JWT token generated for Test Creator (moderator) in room vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/auction-jwt-test-123-1756615123147","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"Auction meeting created: vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/auction-jwt-test-123-1756615123147 for auction jwt-test-123","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"JWT token generated for Test Winner (participant) in room vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/auction-jwt-test-123-1756615123147","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"Attendee access generated for Test Winner in room vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/auction-jwt-test-123-1756615123147","service":"meeting-auction-backend","timestamp":"2025-08-31 10:08:43"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"Meeting room created: auction-jwt-test-123-1756615143792 (expires: Sun Aug 31 2025 10:39:03 GMT+0530 (India Standard Time))","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"JWT token generated for Test Creator (moderator) in room auction-jwt-test-123-1756615143792","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"Auction meeting created: auction-jwt-test-123-1756615143792 for auction jwt-test-123","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"JWT token generated for Test Winner (participant) in room auction-jwt-test-123-1756615143792","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"Attendee access generated for Test Winner in room auction-jwt-test-123-1756615143792","service":"meeting-auction-backend","timestamp":"2025-08-31 10:09:03"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:40:00.778Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:00"}
+{"level":"info","message":"📦 Current block: 45463956","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:07"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:09"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:10"}
+{"level":"info","message":"  🕐 Auction 3: Active (16429 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (16744 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:11"}
+{"level":"info","message":"  🕐 Auction 5: Active (276143 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (190269 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17577 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:13"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 13339ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:10:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:42:00.904Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:00"}
+{"level":"info","message":"📦 Current block: 45464018","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:02"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:03"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:03"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:04"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:05"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:06"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:07"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:08"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:10"}
+{"level":"info","message":"  🕐 Auction 3: Active (16367 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (16682 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (276081 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (190207 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17515 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:13"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 13753ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:12:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:44:00.028Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:00"}
+{"level":"info","message":"📦 Current block: 45464083","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:03"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:10"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:10"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:10"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (16302 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (16617 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (276016 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:13"}
+{"level":"info","message":"  🕐 Auction 6: Active (190142 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17450 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14714ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:14:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:46:00.155Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:00"}
+{"level":"info","message":"📦 Current block: 45464150","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:06"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:07"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:12"}
+{"level":"info","message":"  🕐 Auction 3: Active (16235 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (16550 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:13"}
+{"level":"info","message":"  🕐 Auction 5: Active (275949 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:13"}
+{"level":"info","message":"  🕐 Auction 6: Active (190075 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17383 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:15"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:15"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 15390ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:15"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:16:15"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:48:00.302Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:00"}
+{"level":"info","message":"📦 Current block: 45464216","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:03"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (16169 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (16484 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275883 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:13"}
+{"level":"info","message":"  🕐 Auction 6: Active (190009 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"  🕐 Auction 7: Active (17317 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14650ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:18:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:50:00.463Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:00"}
+{"level":"info","message":"📦 Current block: 45464293","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:07"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:10"}
+{"level":"info","message":"  🕐 Auction 3: Active (16092 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (16407 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275806 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:13"}
+{"level":"info","message":"  🕐 Auction 6: Active (189932 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17240 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14208ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:20:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:52:00.583Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:00"}
+{"level":"info","message":"📦 Current block: 45464369","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:10"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:10"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:10"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (16016 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (16331 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275730 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (189856 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (17164 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:13"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 13765ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:22:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:54:00.712Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:00"}
+{"level":"info","message":"📦 Current block: 45464442","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:07"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:08"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:09"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:10"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:11"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:11"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:11"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:11"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (15943 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (16258 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:13"}
+{"level":"info","message":"  🕐 Auction 5: Active (275657 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:14"}
+{"level":"info","message":"  🕐 Auction 6: Active (189783 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:14"}
+{"level":"info","message":"  🕐 Auction 7: Active (17091 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:15"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:15"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:15"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14998ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:15"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:24:15"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:56:00.864Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:00"}
+{"level":"info","message":"📦 Current block: 45464515","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:03"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:05"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:06"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:07"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:07"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:08"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:08"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:08"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:09"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:09"}
+{"level":"info","message":"  🕐 Auction 3: Active (15870 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:10"}
+{"level":"info","message":"  🕐 Auction 4: Active (16185 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:10"}
+{"level":"info","message":"  🕐 Auction 5: Active (275584 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:10"}
+{"level":"info","message":"  🕐 Auction 6: Active (189710 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:11"}
+{"level":"info","message":"  🕐 Auction 7: Active (17018 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:12"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:12"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:12"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 11908ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:12"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:26:12"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T04:58:00.984Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:00"}
+{"level":"info","message":"📦 Current block: 45464592","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:02"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:03"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:03"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:04"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:07"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:10"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:10"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:10"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (15793 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (16108 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275507 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (189633 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (16941 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:13"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 13357ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:28:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:00:00.192Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:00"}
+{"level":"info","message":"📦 Current block: 45464667","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:00"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:01"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:01"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:01"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:02"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:03"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:03"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:04"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:04"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:05"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:05"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:05"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:05"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:05"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:06"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:06"}
+{"level":"info","message":"  🕐 Auction 3: Active (15718 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:07"}
+{"level":"info","message":"  🕐 Auction 4: Active (16033 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:07"}
+{"level":"info","message":"  🕐 Auction 5: Active (275432 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:08"}
+{"level":"info","message":"  🕐 Auction 6: Active (189558 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:08"}
+{"level":"info","message":"  🕐 Auction 7: Active (16866 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:08"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:09"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:09"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 9072ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:09"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:30:09"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:02:00.345Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:00"}
+{"level":"info","message":"📦 Current block: 45464751","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:04"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:05"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:08"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:08"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (15634 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (15949 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275348 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (189474 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (16782 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14466ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:32:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:04:00.504Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:00"}
+{"level":"info","message":"📦 Current block: 45464833","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:01"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:01"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:02"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:02"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:02"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:03"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:03"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:04"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:04"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:05"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:05"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:05"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:05"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:06"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:06"}
+{"level":"info","message":"  🕐 Auction 3: Active (15552 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:06"}
+{"level":"info","message":"  🕐 Auction 4: Active (15867 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:07"}
+{"level":"info","message":"  🕐 Auction 5: Active (275266 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:07"}
+{"level":"info","message":"  🕐 Auction 6: Active (189392 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"  🕐 Auction 7: Active (16700 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 8375ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:34:08"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:06:00.755Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:00"}
+{"level":"info","message":"📦 Current block: 45464919","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:07"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:07"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:08"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:09"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:10"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:10"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:10"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (15466 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:12"}
+{"level":"info","message":"  🕐 Auction 4: Active (15781 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:13"}
+{"level":"info","message":"  🕐 Auction 5: Active (275180 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:14"}
+{"level":"info","message":"  🕐 Auction 6: Active (189306 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:14"}
+{"level":"info","message":"  🕐 Auction 7: Active (16614 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:15"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:15"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:15"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14988ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:15"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:36:15"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:08:00.880Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:00"}
+{"level":"info","message":"📦 Current block: 45464999","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:02"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:03"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:03"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:04"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:05"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:07"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:08"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:09"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:10"}
+{"level":"info","message":"  🕐 Auction 3: Active (15386 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (15701 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:11"}
+{"level":"info","message":"  🕐 Auction 5: Active (275100 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:12"}
+{"level":"info","message":"  🕐 Auction 6: Active (189226 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (16534 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:13"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 13198ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:38:14"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T05:10:00.003Z","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:00"}
+{"level":"info","message":"📦 Current block: 45465071","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:01"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:02"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:02"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:03"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:04"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:05"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:06"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:06"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:07"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:09"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:09"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:09"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:09"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:09"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:10"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:11"}
+{"level":"info","message":"  🕐 Auction 3: Active (15314 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:11"}
+{"level":"info","message":"  🕐 Auction 4: Active (15629 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:12"}
+{"level":"info","message":"  🕐 Auction 5: Active (275028 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:13"}
+{"level":"info","message":"  🕐 Auction 6: Active (189154 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:13"}
+{"level":"info","message":"  🕐 Auction 7: Active (16462 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:14"}
+{"level":"info","message":"  ⏭️  Auction 8: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:14"}
+{"level":"info","message":"✨ No auctions ready to end at this time","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:14"}
+{"level":"info","message":"✅ CRON JOB COMPLETED in 14560ms","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:14"}
+{"level":"info","message":"────────────────────────────────────────────────────────────","service":"meeting-auction-backend","timestamp":"2025-08-31 10:40:14"}

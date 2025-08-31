@@ -3,9 +3,9 @@ const logger = require('../utils/logger');
 
 class JitsiService {
   constructor() {
-    // Basic Jitsi configuration
-    this.domain = '8x8.vc'; // JaaS domain
-    this.appId = process.env.JAAS_APP_ID || 'meeting-app';
+    // Basic Jitsi configuration  
+    this.domain = process.env.JITSI_DOMAIN || '8x8.vc'; // JaaS domain
+    this.appId = process.env.JITSI_APP_ID || process.env.JAAS_APP_ID || 'meeting-app';
     
     // JaaS JWT configuration
     this.privateKey = process.env.JITSI_PRIVATE_KEY || process.env.JAAS_PRIVATE_KEY;
@@ -26,11 +26,9 @@ class JitsiService {
   // Create a meeting room
   createRoom({ roomName, displayName, duration = 60, maxParticipants = 10 }) {
     try {
-      // Generate unique room ID
+      // Generate unique room ID (without app prefix - will be added later)
       const timestamp = Date.now();
-      const roomId = this.appId.startsWith('vpaas-magic-cookie-') 
-        ? `${this.appId}/${roomName}-${timestamp}`
-        : `${roomName}-${timestamp}`;
+      const roomId = `${roomName}-${timestamp}`;
       
       const expiresAt = new Date(Date.now() + (duration * 60 * 1000));
       

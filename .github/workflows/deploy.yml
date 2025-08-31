@@ -1,0 +1,277 @@
+name: Deploy Entangle Backend
+
+on:
+  push:    branches: [ main, dev ]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        
+    - name: Install dependencies
+      run: |
+        cd backend
+        npm install
+        
+    - name: Deploy backend files
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        ARGS: "-rltgoDzvO --delete"
+        SOURCE: "backend/"
+        REMOTE_HOST: 209.38.123.139
+        REMOTE_USER: root
+        TARGET: "/var/www/entangle-backend"
+        EXCLUDE: "node_modules/, .git/, logs/, *.log"
+        
+    - name: Run post-deployment commands
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: 209.38.123.139
+        username: root
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd /var/www/entangle-backend
+          
+          echo "🚀 Starting post-deployment setup..."
+          
+          # Create .env.production file if it doesn't exist
+          if [ ! -f .env.production ]; then
+            echo "📄 Creating production environment file..."
+            cat > .env.production << 'ENV_FILE'
+          # Server Configuration
+          NODE_ENV=production
+          PORT=5009
+          HOST=0.0.0.0
+          
+          # Database Configuration  
+          DB_HOST=localhost
+          DB_PORT=5432
+          DB_NAME=entangle_meetings
+          DB_USER=entangle_user
+          DB_PASSWORD=entangle_secure_2024
+          
+          # CORS Configuration
+          FRONTEND_URL=https://the-entangle.vercel.app
+          
+          # Para API Configuration
+          PARA_API_KEY=beta_fc50f3388ba41bad00adba9289d61aac
+          PARA_SECRET_API_KEY=sk_beta_a5e95b16664f8be149a10b9a44cb2cca
+          PARA_ENVIRONMENT=beta
+          
+          # Jitsi Configuration
+          JITSI_DOMAIN=8x8.vc
+          JITSI_APP_ID=vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd
+          JITSI_KID=vpaas-magic-cookie-12e00659b2b144eebab8e26c218191dd/a521af
+          JITSI_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
+          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
+          DxNkFw4xpuDu0w2Rl7Hbbw==
+          -----END PRIVATE KEY-----"
+          
+          # Blockchain Configuration
+          CONTRACT_ADDRESS=0xceBD87246e91C7D70C82D5aE5C196a0028543933
+          RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
+          AVALANCHE_RPC=https://api.avax-test.network/ext/bc/C/rpc
+          PLATFORM_PRIVATE_KEY=0x69a0a908f3a6c7a26124b6566f973a8c5fc7a89fea1c112126dc5319db4b9ac6
+          
+          # Security
+          JWT_SECRET=your-super-secret-jwt-key-min-32-chars-production-2024
+          ENV_FILE
+          fi
+          
+          # Install production dependencies
+          echo "📦 Installing production dependencies..."
+          npm install --production
+          
+          # Fix database permissions first
+          echo "🗄️ Setting up database permissions..."
+          sudo -u postgres psql << 'SQL'
+          GRANT ALL PRIVILEGES ON SCHEMA public TO entangle_user;
+          GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO entangle_user;
+          GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO entangle_user;
+          GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO entangle_user;
+          ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO entangle_user;
+          \q
+          SQL
+          
+          # Setup database schema if needed
+          echo "🗄️ Setting up database schema..."
+          if [ -f "database/schema.sql" ]; then
+            PGPASSWORD=entangle_secure_2024 psql -h localhost -U entangle_user -d entangle_meetings -f database/schema.sql || echo "Schema already exists"
+          fi
+          
+          # Create logs directory
+          mkdir -p logs
+          
+          # Install PM2 globally if not installed
+          if ! command -v pm2 &> /dev/null; then
+            echo "📦 Installing PM2..."
+            npm install -g pm2
+          fi
+          
+          # Check if src/server.js exists
+          if [ -f src/server.js ]; then
+            echo "✅ Found src/server.js, starting application..."
+            
+            # Create ecosystem file if it doesn't exist
+            if [ ! -f ecosystem.config.js ]; then
+              cat > ecosystem.config.js << 'ECOSYSTEM'
+          module.exports = {
+            apps: [{
+              name: 'entangle-backend',
+              script: './src/server.js',
+              instances: 1,
+              autorestart: true,
+              watch: false,
+              max_memory_restart: '1G',
+              env: {
+                NODE_ENV: 'production',
+                PORT: 5009,
+                HOST: '0.0.0.0'
+              },
+              env_file: './.env.production',
+              error_file: './logs/error.log',
+              out_file: './logs/out.log',
+              log_file: './logs/combined.log',
+              time: true
+            }]
+          };
+          ECOSYSTEM
+            fi
+            
+            # Setup Nginx configuration
+            echo "🌐 Setting up Nginx configuration..."
+            cat > /etc/nginx/sites-available/entangle-backend << 'NGINX_CONF'
+          server {
+              listen 80;
+              server_name 209.38.123.139 _;
+          
+              location / {
+                  # Handle preflight requests
+                  if (\$request_method = 'OPTIONS') {
+                      add_header 'Access-Control-Allow-Origin' 'https://the-entangle.vercel.app' always;
+                      add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS' always;
+                      add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization' always;
+                      add_header 'Access-Control-Max-Age' 1728000;
+                      add_header 'Content-Type' 'text/plain; charset=utf-8';
+                      add_header 'Content-Length' 0;
+                      return 204;
+                  }
+          
+                  # Regular CORS headers
+                  add_header 'Access-Control-Allow-Origin' 'https://the-entangle.vercel.app' always;
+                  add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS' always;
+                  add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization' always;
+                  add_header 'Access-Control-Allow-Credentials' 'true' always;
+          
+                  proxy_pass http://localhost:5009;
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade \$http_upgrade;
+                  proxy_set_header Connection 'upgrade';
+                  proxy_set_header Host \$host;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto \$scheme;
+                  proxy_cache_bypass \$http_upgrade;
+              }
+          }
+          NGINX_CONF
+          
+            # Enable Nginx site
+            ln -sf /etc/nginx/sites-available/entangle-backend /etc/nginx/sites-enabled/
+            rm -f /etc/nginx/sites-enabled/default
+            nginx -t && systemctl restart nginx
+            
+            # Start or restart with PM2
+            pm2 describe entangle-backend > /dev/null 2>&1
+            if [ $? -eq 0 ]; then
+              echo "🔄 Restarting application..."
+              pm2 restart entangle-backend
+            else
+              echo "🚀 Starting application..."
+              pm2 start ecosystem.config.js
+            fi
+            
+            pm2 save
+            
+            # Wait for startup
+            echo "⏳ Waiting for application to start..."
+            sleep 10
+            
+            # Health check
+            echo "🏥 Performing health check..."
+            if curl -f http://localhost:5009/api/health > /dev/null 2>&1; then
+              echo "✅ APPLICATION DEPLOYED SUCCESSFULLY!"
+              echo "🌐 Backend API: http://${{ secrets.SERVER_HOST }}/api/health"
+            else
+              echo "⚠️ Health check failed, checking logs..."
+              pm2 logs entangle-backend --lines 10
+            fi
+            
+            echo "📊 PM2 Status:"
+            pm2 status
+            
+          else
+            echo "❌ ERROR: src/server.js not found!"
+            echo "📁 Current directory structure:"
+            find . -name "*.js" | head -20
+            exit 1
+          fi
+
+  notify:
+    needs: [test, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Deployment Status
+      run: |
+        if [[ "${{ needs.deploy.result }}" == "success" ]]; then
+          echo "✅ Deployment successful to server 209.38.123.139"
+          echo "🌐 Backend API: http://209.38.123.139/api/health"
+        else
+          echo "❌ Deployment failed"
+          exit 1
+        fi

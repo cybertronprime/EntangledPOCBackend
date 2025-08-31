@@ -1,8 +1,7 @@
 name: Deploy Entangle Backend
 
 on:
-  push:
-    branches: [ main, dev, master ]
+  push:    branches: [ main, dev ]
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
@@ -19,14 +18,16 @@ jobs:
         node-version: '20'
         
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd backend
+        npm install
         
     - name: Deploy backend files
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
-        SOURCE: "./"
+        SOURCE: "backend/"
         REMOTE_HOST: 209.38.123.139
         REMOTE_USER: root
         TARGET: "/var/www/entangle-backend"
@@ -120,9 +121,9 @@ jobs:
           ENV_FILE
           fi
           
-          # Install all dependencies (including dev dependencies that may be needed)
-          echo "📦 Installing all dependencies..."
-          npm install
+          # Install production dependencies
+          echo "📦 Installing production dependencies..."
+          npm install --production
           
           # Fix database permissions first
           echo "🗄️ Setting up database permissions..."
@@ -260,7 +261,7 @@ jobs:
           fi
 
   notify:
-    needs: [deploy]
+    needs: [test, deploy]
     runs-on: ubuntu-latest
     if: always()
     

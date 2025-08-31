@@ -26,7 +26,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
-        SOURCE: "./"
+        SOURCE: "backend/"
         REMOTE_HOST: 209.38.123.139
         REMOTE_USER: root
         TARGET: "/var/www/entangle-backend"
@@ -120,9 +120,9 @@ jobs:
           ENV_FILE
           fi
           
-          # Install production dependencies
-          echo "📦 Installing production dependencies..."
-          npm install --production
+          # Install all dependencies (including dev dependencies that may be needed)
+          echo "📦 Installing all dependencies..."
+          npm install
           
           # Fix database permissions first
           echo "🗄️ Setting up database permissions..."

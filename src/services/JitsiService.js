@@ -105,7 +105,7 @@ class JitsiService {
         aud: 'jitsi',
         iss: 'chat',
         sub: this.appId,
-        room: fullRoomName, // CRITICAL: Must be appId/roomName format
+        room: '*', // Use '*' for universal access as per official docs
         exp: now + (expiresIn * 60 * 60),
         nbf: now - 10, // Not before (10 seconds ago for clock skew)
         context: {
@@ -113,26 +113,23 @@ class JitsiService {
             id: userId,
             name: userName,
             email: email || '',
-            moderator: role === 'moderator',
+            moderator: role === 'moderator' ? 'true' : 'false', // STRING not boolean!
             avatar: ''
           },
           features: {
-            livestreaming: role === 'moderator',
-            recording: role === 'moderator',
-            transcription: false,
-            'sip-inbound-call': false,
-            'sip-outbound-call': false
+            livestreaming: role === 'moderator' ? 'true' : 'false', // STRING not boolean!
+            recording: role === 'moderator' ? 'true' : 'false',     // STRING not boolean!
+            transcription: 'false',
+            'outbound-call': 'false'
           }
         }
       };
       
-      // Sign with RS256
+      // Sign with RS256 (simplified header like official docs)
       const token = jwt.sign(payload, this.privateKey, { 
         algorithm: 'RS256',
         header: { 
-          kid: this.kid,
-          alg: 'RS256',
-          typ: 'JWT'
+          kid: this.kid
         }
       });
       

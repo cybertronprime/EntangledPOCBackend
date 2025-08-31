@@ -1,7 +1,8 @@
 name: Deploy Entangle Backend
 
 on:
-  push:    branches: [ main, dev ]
+  push:
+    branches: [ main, dev, master ]
   workflow_dispatch:  # Allow manual trigger
 
 jobs:

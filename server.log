@@ -1,0 +1,29 @@
+
+> meeting-auction-backend@1.0.0 start
+> node src/server.js
+
+[32minfo[39m: JaaS JWT configuration found - tokens will be generated {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[31merror[39m: Failed to initialize Lit Protocol: the litNetwork specified in the LitNodeClient config not found in LIT_NETWORKS {"errorCode":"LitNodeClientBadConfigError","errorKind":"Config","service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+(node:29585) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[33mwarn[39m: Meeting Service: Lit Protocol not configured {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Meeting Service initialized {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: PostgreSQL connected {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Database tables created/verified from schema.sql {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Database setup completed successfully {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Auction cron service wallet initialized {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11","walletAddress":"0xE129236aAf50E8890a3eaad082FF37232bAB37b2"}
+[32minfo[39m: Auction cron service initialized {"contractAddress":"0xceBD87246e91C7D70C82D5aE5C196a0028543933","hasWallet":true,"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Auction cron job started - checking every 2 minutes {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Auction cron service started {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Server running on port 5009 {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Para integration backend initialized successfully {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:48:11"}
+[32minfo[39m: Checking for ended auctions... {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:50:00"}
+[32minfo[39m: Skipping auction 1 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:50:05"}
+[32minfo[39m: Skipping auction 2 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:50:06"}
+[32minfo[39m: Skipping auction 8 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:50:07"}
+[32minfo[39m: No ended auctions found {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:50:07"}
+[32minfo[39m: Checking for ended auctions... {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:52:00"}
+[32minfo[39m: Skipping auction 1 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:52:06"}
+[32minfo[39m: Skipping auction 2 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:52:06"}
+[32minfo[39m: Skipping auction 8 - no bids placed {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:52:08"}
+[32minfo[39m: No ended auctions found {"service":"meeting-auction-backend","timestamp":"2025-08-31 08:52:08"}

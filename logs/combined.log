@@ -1999,3 +1999,109 @@
 {"level":"info","message":"Auction cron service started","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
 {"level":"info","message":"Server running on port 5009","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
 {"level":"info","message":"Para integration backend initialized successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"🔍 INITIAL CHECK at 2025-08-31T06:19:35.971Z","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:35"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:35"}
+{"level":"error","message":"Error in auction cron job: Cannot read properties of null (reading 'getBlockNumber')","service":"meeting-auction-backend","stack":"TypeError: Cannot read properties of null (reading 'getBlockNumber')\n    at AuctionCronService.processEndedAuctions (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:128:48)\n    at Timeout._onTimeout (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:98:20)\n    at listOnTimeout (node:internal/timers:614:17)\n    at process.processTimers (node:internal/timers:549:7)","timestamp":"2025-08-31 11:49:35"}
+{"level":"info","message":"✅ Initial auction check completed","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:35"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"errorCode":"LitNodeClientBadConfigError","errorKind":"Config","level":"error","message":"Failed to initialize Lit Protocol: the litNetwork specified in the LitNodeClient config not found in LIT_NETWORKS","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"warn","message":"Meeting Service: Lit Protocol not configured","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Meeting Service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"PostgreSQL connected","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Database tables created/verified from schema.sql","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Database setup completed successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Auction cron service wallet initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27","walletAddress":"0xE129236aAf50E8890a3eaad082FF37232bAB37b2"}
+{"contractAddress":"0xceBD87246e91C7D70C82D5aE5C196a0028543933","hasWallet":true,"level":"info","message":"Auction cron service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"🤖 STARTING AUCTION CRON SERVICE","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"⏰ Schedule: Every 2 minutes","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"💼 Wallet: 0xE129236aAf50E8890a3eaad082FF37232bAB37b2","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"📝 Contract: 0xceBD87246e91C7D70C82D5aE5C196a0028543933","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"============================================================","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"🎬 Running initial auction check in 5 seconds...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"🟢 Auction cron job started successfully!","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"📊 Next automatic check in 2 minutes...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Auction cron service started","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Server running on port 5009","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"Para integration backend initialized successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:27"}
+{"level":"info","message":"🔍 INITIAL CHECK at 2025-08-31T06:22:32.723Z","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:32"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:32"}
+{"level":"info","message":"📦 Current block: 45467947","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:33"}
+{"level":"error","message":"Error in auction cron job: auctionCounter.toNumber is not a function","service":"meeting-auction-backend","stack":"TypeError: auctionCounter.toNumber is not a function\n    at AuctionCronService.processEndedAuctions (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:133:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Timeout._onTimeout (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:98:9)","timestamp":"2025-08-31 11:52:34"}
+{"level":"info","message":"✅ Initial auction check completed","service":"meeting-auction-backend","timestamp":"2025-08-31 11:52:34"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"errorCode":"LitNodeClientBadConfigError","errorKind":"Config","level":"error","message":"Failed to initialize Lit Protocol: the litNetwork specified in the LitNodeClient config not found in LIT_NETWORKS","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"warn","message":"Meeting Service: Lit Protocol not configured","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Meeting Service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"PostgreSQL connected","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Database tables created/verified from schema.sql","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Database setup completed successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Auction cron service wallet initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39","walletAddress":"0xE129236aAf50E8890a3eaad082FF37232bAB37b2"}
+{"contractAddress":"0xceBD87246e91C7D70C82D5aE5C196a0028543933","hasWallet":true,"level":"info","message":"Auction cron service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"🤖 STARTING AUCTION CRON SERVICE","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"⏰ Schedule: Every 2 minutes","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"💼 Wallet: 0xE129236aAf50E8890a3eaad082FF37232bAB37b2","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"📝 Contract: 0xceBD87246e91C7D70C82D5aE5C196a0028543933","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"============================================================","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"🎬 Running initial auction check in 5 seconds...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"🟢 Auction cron job started successfully!","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"📊 Next automatic check in 2 minutes...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Auction cron service started","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Server running on port 5009","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"Para integration backend initialized successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:39"}
+{"level":"info","message":"🔍 INITIAL CHECK at 2025-08-31T06:24:44.826Z","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:44"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:44"}
+{"level":"info","message":"📦 Current block: 45468034","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:45"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:46"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:46"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:48"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:48"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:49"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:50"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:51"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:52"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:52"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:54:53"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"errorCode":"LitNodeClientBadConfigError","errorKind":"Config","level":"error","message":"Failed to initialize Lit Protocol: the litNetwork specified in the LitNodeClient config not found in LIT_NETWORKS","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"warn","message":"Meeting Service: Lit Protocol not configured","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Meeting Service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"PostgreSQL connected","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Database tables created/verified from schema.sql","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Database setup completed successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Auction cron service wallet initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47","walletAddress":"0xE129236aAf50E8890a3eaad082FF37232bAB37b2"}
+{"contractAddress":"0xceBD87246e91C7D70C82D5aE5C196a0028543933","hasWallet":true,"level":"info","message":"Auction cron service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"🤖 STARTING AUCTION CRON SERVICE","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"⏰ Schedule: Every 2 minutes","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"💼 Wallet: 0xE129236aAf50E8890a3eaad082FF37232bAB37b2","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"📝 Contract: 0xceBD87246e91C7D70C82D5aE5C196a0028543933","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"============================================================","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"🎬 Running initial auction check in 5 seconds...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"🟢 Auction cron job started successfully!","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"📊 Next automatic check in 2 minutes...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Auction cron service started","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Server running on port 5009","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"Para integration backend initialized successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:47"}
+{"level":"info","message":"🔍 INITIAL CHECK at 2025-08-31T06:25:52.719Z","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:52"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:52"}
+{"level":"info","message":"📦 Current block: 45468077","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:53"}
+{"level":"info","message":"🏷️  Total auctions in contract: 9","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:54"}
+{"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:54"}
+{"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:54"}
+{"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:55"}
+{"level":"info","message":"  📌 Auction 3: Active (ends at block 45480385)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:55"}
+{"level":"info","message":"  📌 Auction 4: Active (ends at block 45480700)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:56"}
+{"level":"info","message":"  📌 Auction 5: Active (ends at block 45740099)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:56"}
+{"level":"info","message":"  📌 Auction 6: Active (ends at block 45654225)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:57"}
+{"level":"info","message":"  📌 Auction 7: Active (ends at block 45481533)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:57"}
+{"level":"info","message":"  📌 Auction 8: Active (ends at block 45439719)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:57"}
+{"level":"info","message":"  ✅ Auction 9: Already ended","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:58"}
+{"level":"info","message":"📊 Found 8 active auctions out of 9 total","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:58"}
+{"level":"info","message":"⏰ Checking active auctions for expiry...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:58"}
+{"level":"info","message":"  ⏭️  Auction 1: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:59"}
+{"level":"info","message":"  ⏭️  Auction 2: EXPIRED but no bids - skipping","service":"meeting-auction-backend","timestamp":"2025-08-31 11:55:59"}
+{"level":"info","message":"  🕐 Auction 3: Active (12308 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:00"}
+{"level":"info","message":"  🕐 Auction 4: Active (12623 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:00"}
+{"level":"info","message":"🚀 CRON JOB TRIGGERED at 2025-08-31T06:26:00.730Z","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:00"}
+{"level":"info","message":"🔍 CHECKING FOR ENDED AUCTIONS...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:00"}
+{"level":"info","message":"  🕐 Auction 5: Active (272022 blocks remaining)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:00"}
+{"level":"info","message":"📦 Current block: 45468081","service":"meeting-auction-backend","timestamp":"2025-08-31 11:56:01"}

@@ -21,7 +21,7 @@ class AuctionCronService {
     try {
       // Initialize Web3 connection
       const rpcUrl = process.env.RPC_URL || process.env.AVALANCHE_RPC || 'https://api.avax-test.network/ext/bc/C/rpc';
-      this.provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+      this.provider = new ethers.JsonRpcProvider(rpcUrl);
       
       // Initialize wallet for transactions
       const privateKey = process.env.PLATFORM_PRIVATE_KEY || process.env.WALLET_PRIVATE_KEY;
@@ -130,10 +130,10 @@ class AuctionCronService {
       
       // Get auction counter and manually check each auction (since getActiveAuctions() has ABI issues)
       const auctionCounter = await this.contract.auctionCounter();
-      logger.info(`🏷️  Total auctions in contract: ${auctionCounter.toNumber()}`);
+      logger.info(`🏷️  Total auctions in contract: ${Number(auctionCounter)}`);
       
       const activeAuctionIds = [];
-      const totalAuctions = auctionCounter.toNumber();
+      const totalAuctions = Number(auctionCounter);
       
       // Check each auction individually
       logger.info('📋 Scanning all auctions...');
@@ -142,8 +142,8 @@ class AuctionCronService {
           const auction = await this.contract.getAuction(i);
           // Only include auctions that are not ended
           if (!auction.ended) {
-            activeAuctionIds.push(ethers.BigNumber.from(i));
-            logger.info(`  📌 Auction ${i}: Active (ends at block ${auction.endBlock.toNumber()})`);
+            activeAuctionIds.push(BigInt(i));
+            logger.info(`  📌 Auction ${i}: Active (ends at block ${Number(auction.endBlock)})`);
           } else {
             logger.info(`  ✅ Auction ${i}: Already ended`);
           }
@@ -162,19 +162,19 @@ class AuctionCronService {
       for (const auctionId of activeAuctionIds) {
         try {
           const auction = await this.contract.getAuction(auctionId);
-          const endBlock = auction.endBlock.toNumber();
+          const endBlock = Number(auction.endBlock);
           const blocksRemaining = endBlock - currentBlock;
           
           // Check if auction has ended (current block >= end block)
           if (currentBlock >= endBlock && !auction.ended) {
             // Only process auctions that have bids
-            const hasWinner = auction.highestBidder !== ethers.constants.AddressZero;
+            const hasWinner = auction.highestBidder !== ethers.ZeroAddress;
             if (hasWinner) {
               readyToEndAuctions.push({
                 id: auctionId,
                 auction: auction
               });
-              logger.info(`  🎯 Auction ${auctionId}: EXPIRED with winner ${auction.highestBidder} (bid: ${ethers.utils.formatEther(auction.highestBid)} AVAX)`);
+              logger.info(`  🎯 Auction ${auctionId}: EXPIRED with winner ${auction.highestBidder} (bid: ${ethers.formatEther(auction.highestBid)} AVAX)`);
             } else {
               logger.info(`  ⏭️  Auction ${auctionId}: EXPIRED but no bids - skipping`);
             }
@@ -214,7 +214,7 @@ class AuctionCronService {
       logger.info(`🎯 PROCESSING ENDED AUCTION ${auctionId}`);
       logger.info(`   👤 Creator: ${auction.creator}`);
       logger.info(`   🏆 Winner: ${auction.highestBidder}`);
-      logger.info(`   💰 Winning bid: ${ethers.utils.formatEther(auction.highestBid)} AVAX`);
+      logger.info(`   💰 Winning bid: ${ethers.formatEther(auction.highestBid)} AVAX`);
 
       // Step 1: End the auction on-chain
       logger.info(`🔗 Step 1: Ending auction ${auctionId} on blockchain...`);
@@ -224,13 +224,13 @@ class AuctionCronService {
       logger.info(`📊 Step 2: Getting updated auction data...`);
       const updatedAuction = await this.contract.getAuction(auctionId);
       
-      if (updatedAuction.nftTokenId && updatedAuction.nftTokenId.toNumber() > 0) {
+      if (updatedAuction.nftTokenId && Number(updatedAuction.nftTokenId) > 0) {
         logger.info(`🎨 NFT minted successfully! Token ID: ${updatedAuction.nftTokenId.toString()}`);
       }
 
       // Step 3: Get user data for creator and winner
       const creatorData = await this.getUserDataByWallet(auction.host);
-      const winnerData = auction.highestBidder !== ethers.constants.AddressZero 
+      const winnerData = auction.highestBidder !== ethers.ZeroAddress 
         ? await this.getUserDataByWallet(auction.highestBidder) 
         : null;
 

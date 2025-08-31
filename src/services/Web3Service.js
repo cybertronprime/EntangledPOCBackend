@@ -55,7 +55,7 @@ class Web3Service {
   initialize() {
     try {
       // Initialize provider
-      this.provider = new ethers.providers.JsonRpcProvider(this.config.rpcUrl);
+      this.provider = new ethers.JsonRpcProvider(this.config.rpcUrl);
       
       // Initialize wallet with private key
       const privateKey = process.env.PRIVATE_KEY;
@@ -109,7 +109,7 @@ class Web3Service {
       console.log(`🐦 Twitter ID: ${twitterId}`);
       console.log(`💰 Reserve price: ${reservePrice} AVAX`);
       
-      const reservePriceWei = ethers.utils.parseEther(reservePrice.toString());
+      const reservePriceWei = ethers.parseEther(reservePrice.toString());
       
       const tx = await this.contract.createAuction(
         host,
@@ -129,7 +129,7 @@ class Web3Service {
       
       // Get the auction ID from the event
       const event = receipt.events?.find(e => e.event === 'AuctionCreated');
-      const auctionId = event?.args?.auctionId?.toNumber();
+      const auctionId = event?.args?.auctionId ? Number(event.args.auctionId) : null;
       
       return {
         success: true,
@@ -153,18 +153,18 @@ class Web3Service {
       const auction = await this.contract.getAuction(auctionId);
       
       return {
-        id: auction.id.toNumber(),
+        id: Number(auction.id),
         host: auction.host,
-        startBlock: auction.startBlock.toNumber(),
-        endBlock: auction.endBlock.toNumber(),
-        reservePrice: ethers.utils.formatEther(auction.reservePrice),
-        highestBid: ethers.utils.formatEther(auction.highestBid),
+        startBlock: Number(auction.startBlock),
+        endBlock: Number(auction.endBlock),
+        reservePrice: ethers.formatEther(auction.reservePrice),
+        highestBid: ethers.formatEther(auction.highestBid),
         highestBidder: auction.highestBidder,
         meetingMetadataIPFS: auction.meetingMetadataIPFS,
         hostTwitterId: auction.hostTwitterId,
         ended: auction.ended,
         meetingScheduled: auction.meetingScheduled,
-        duration: auction.duration.toNumber()
+        duration: Number(auction.duration)
       };
       
     } catch (error) {
@@ -177,7 +177,7 @@ class Web3Service {
   async getActiveAuctions() {
     try {
       const activeAuctions = await this.contract.getActiveAuctions();
-      return activeAuctions.map(id => id.toNumber());
+      return activeAuctions.map(id => Number(id));
     } catch (error) {
       console.error('❌ Failed to get active auctions:', error);
       throw error;
@@ -194,8 +194,8 @@ class Web3Service {
       ]);
       
       return {
-        auctionCounter: auctionCounter.toNumber(),
-        platformFee: platformFee.toNumber(),
+        auctionCounter: Number(auctionCounter),
+        platformFee: Number(platformFee),
         owner
       };
     } catch (error) {
@@ -240,7 +240,7 @@ class Web3Service {
       console.log(`   Auction ID: ${auctionId.toString()}`);
       console.log(`   Host: ${host}`);
       console.log(`   Twitter ID: ${twitterId}`);
-      console.log(`   Reserve Price: ${ethers.utils.formatEther(reservePrice)} AVAX`);
+      console.log(`   Reserve Price: ${ethers.formatEther(reservePrice)} AVAX`);
       console.log(`   End Block: ${endBlock.toString()}`);
       console.log(`   Metadata: ${metadataIPFS}`);
     });
@@ -250,7 +250,7 @@ class Web3Service {
       console.log('💰 New bid placed:');
       console.log(`   Auction ID: ${auctionId.toString()}`);
       console.log(`   Bidder: ${bidder}`);
-      console.log(`   Amount: ${ethers.utils.formatEther(amount)} AVAX`);
+      console.log(`   Amount: ${ethers.formatEther(amount)} AVAX`);
       console.log(`   New End Block: ${newEndBlock.toString()}`);
     });
     
@@ -260,7 +260,7 @@ class Web3Service {
       console.log(`   Auction ID: ${auctionId.toString()}`);
       console.log(`   Winner: ${winner}`);
       console.log(`   Host: ${host}`);
-      console.log(`   Winning Bid: ${ethers.utils.formatEther(winningBid)} AVAX`);
+      console.log(`   Winning Bid: ${ethers.formatEther(winningBid)} AVAX`);
     });
     
     // Monitor MeetingScheduled events
@@ -275,7 +275,7 @@ class Web3Service {
   async getBalance() {
     try {
       const balance = await this.wallet.getBalance();
-      return ethers.utils.formatEther(balance);
+      return ethers.formatEther(balance);
     } catch (error) {
       console.error('❌ Failed to get balance:', error);
       throw error;

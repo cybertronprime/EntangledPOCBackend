@@ -1,7 +1,8 @@
 name: Deploy Entangle Backend
 
 on:
-  push:    branches: [ main, dev ]
+  push:
+    branches: [ master, main, dev ]
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
@@ -261,7 +262,7 @@ jobs:
           fi
 
   notify:
-    needs: [test, deploy]
+    needs: [deploy]
     runs-on: ubuntu-latest
     if: always()
     

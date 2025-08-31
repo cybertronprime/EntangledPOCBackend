@@ -1980,3 +1980,22 @@
 {"level":"info","message":"📋 Scanning all auctions...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:37:56"}
 {"level":"info","message":"  📌 Auction 1: Active (ends at block 45436328)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:37:56"}
 {"level":"info","message":"  📌 Auction 2: Active (ends at block 45436571)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:37:57"}
+{"level":"info","message":"JaaS JWT configuration found - tokens will be generated","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"errorCode":"LitNodeClientBadConfigError","errorKind":"Config","level":"error","message":"Failed to initialize Lit Protocol: the litNetwork specified in the LitNodeClient config not found in LIT_NETWORKS","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"warn","message":"Meeting Service: Lit Protocol not configured","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Meeting Service initialized","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"PostgreSQL connected","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Database tables created/verified from schema.sql","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Database setup completed successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"error","message":"Failed to initialize auction cron service: Cannot read properties of undefined (reading 'JsonRpcProvider')","service":"meeting-auction-backend","stack":"TypeError: Cannot read properties of undefined (reading 'JsonRpcProvider')\n    at AuctionCronService.initialize (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:24:44)\n    at new AuctionCronService (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:17:10)\n    at getAuctionCronService (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/services/AuctionCronService.js:429:26)\n    at startServer (/Users/rohitprasad/Desktop/Work/entangled-v2/Entangle-main/backend/src/server.js:97:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"🤖 STARTING AUCTION CRON SERVICE","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"⏰ Schedule: Every 2 minutes","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"💼 Wallet: NONE (read-only mode)","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"📝 Contract: 0xceBD87246e91C7D70C82D5aE5C196a0028543933","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"============================================================","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"🎬 Running initial auction check in 5 seconds...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"🟢 Auction cron job started successfully!","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"📊 Next automatic check in 2 minutes...","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Auction cron service started","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Server running on port 5009","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}
+{"level":"info","message":"Para integration backend initialized successfully","service":"meeting-auction-backend","timestamp":"2025-08-31 11:49:30"}

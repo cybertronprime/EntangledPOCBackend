@@ -3,8 +3,6 @@ const { authenticateToken } = require('../middleware/auth');
 const meetingService = require('../services/MeetingService');
 const paraService = require('../services/ParaService');
 const { pool } = require('../config/database');
-const ethers = require('ethers');
-const MeetingAuctionABI = require('../contracts/MeetingAuction.json');
 const logger = require('../utils/logger');
 
 const router = express.Router();
@@ -55,17 +53,17 @@ router.post('/create-simple', authenticateToken, async (req, res) => {
     }
 
     logger.info(`Simple meeting created by user ${hostUser.id} with guest ${guestUserId}`);
-    
+
     res.json({
       success: true,
       meeting: result.meeting,
       participants: result.participants,
       note: 'Meeting created successfully. Both users can join with their respective URLs.'
     });
-    
+
   } catch (error) {
     logger.error('Create simple meeting error:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to create meeting',
       message: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
     });
@@ -189,15 +187,15 @@ router.get('/:roomId', authenticateToken, async (req, res) => {
         details: result.error
       });
     }
-    
+
     res.json({
       success: true,
       meeting: result.meeting
     });
-    
+
   } catch (error) {
     logger.error('Get meeting info error:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to get meeting info',
       message: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
     });
@@ -208,7 +206,7 @@ router.get('/:roomId', authenticateToken, async (req, res) => {
 router.get('/', authenticateToken, async (req, res) => {
   try {
     const userId = req.user.id;
-    
+
     const query = `
       SELECT m.*, 
              h.display_name as host_name,
@@ -234,15 +232,15 @@ router.get('/', authenticateToken, async (req, res) => {
       expiresAt: meeting.expires_at,
       createdAt: meeting.created_at
     }));
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       meetings
     });
-    
+
   } catch (error) {
     logger.error('List meetings error:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to list meetings',
       message: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
     });
@@ -302,371 +300,98 @@ router.post('/test-create', async (req, res) => {
 });
 
 // ========================================
-// AUCTION MEETING ROUTES
+// PUBLIC MEETING CREATION (NO AUTH, NO DB)
 // ========================================
 
 /**
- * Get "My Meetings" - For auction creators to see their meeting links
+ * Create direct meeting URLs without authentication or database
+ * Perfect for quick testing or simple integrations
  */
-router.get('/my-meetings', authenticateToken, async (req, res) => {
+router.post('/create-direct', async (req, res) => {
   try {
-    const userWallet = req.user.walletAddress;
+    const { 
+      hostName = 'Host User',
+      hostEmail = 'host@example.com', 
+      guestName = 'Guest User',
+      guestEmail = 'guest@example.com',
+      meetingName = 'Direct Meeting',
+      duration = 60
+    } = req.body;
+
+    const jitsiService = require('../services/JitsiService').getJitsiService();
     
-    if (!userWallet) {
-      return res.status(400).json({
-        success: false,
-        error: 'User wallet address not found'
-      });
-    }
-
-    // Get all auctions created by this user that have meetings
-    const result = await pool.query(`
-      SELECT 
-        a.id as auction_id,
-        a.title,
-        a.description,
-        a.meeting_duration,
-        a.created_at as auction_created,
-        m.jitsi_room_id,
-        m.room_url,
-        m.creator_access_token,
-        m.scheduled_at,
-        m.expires_at
-      FROM auctions a
-      LEFT JOIN meetings m ON a.id = m.auction_id
-      WHERE a.creator_wallet = $1 
-        AND m.id IS NOT NULL
-      ORDER BY a.created_at DESC
-    `, [userWallet.toLowerCase()]);
-
-    const meetings = result.rows.map(row => ({
-      auctionId: row.auction_id,
-      title: row.title,
-      description: row.description,
-      duration: row.meeting_duration,
-      meetingUrl: `${row.room_url}?jwt=${row.creator_access_token}`,
-      scheduledAt: row.scheduled_at,
-      expiresAt: row.expires_at,
-      status: 'active'
-    }));
-
-    res.json({
-      success: true,
-      meetings: meetings,
-      total: meetings.length
+    // Generate a unique room ID
+    const roomId = `direct-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    
+    // Create host token (moderator)
+    const hostToken = jitsiService.generateToken({
+      roomName: roomId,
+      userId: `host-${Date.now()}`,
+      userName: hostName,
+      email: hostEmail,
+      role: 'moderator',
+      expiresIn: Math.ceil(duration / 60) // Convert minutes to hours
     });
-
-  } catch (error) {
-    logger.error('Error fetching user meetings:', error);
-    res.status(500).json({
-      success: false,
-      error: 'Failed to fetch meetings'
+    
+    // Create guest token (participant)  
+    const guestToken = jitsiService.generateToken({
+      roomName: roomId,
+      userId: `guest-${Date.now()}`,
+      userName: guestName,
+      email: guestEmail,
+      role: 'participant',
+      expiresIn: Math.ceil(duration / 60)
     });
-  }
-});
-
-/**
- * Access meeting as auction winner - Verifies NFT ownership first
- */
-router.post('/access-winner-meeting', authenticateToken, async (req, res) => {
-  try {
-    const { auctionId, nftTokenId } = req.body;
-    const userWallet = req.user.walletAddress;
-
-    if (!userWallet) {
-      return res.status(400).json({
-        success: false,
-        error: 'User wallet address not found'
-      });
-    }
-
-    if (!auctionId || !nftTokenId) {
-      return res.status(400).json({
-        success: false,
-        error: 'Auction ID and NFT Token ID are required'
-      });
-    }
-
-    // Initialize contract
-    const contractAddress = process.env.CONTRACT_ADDRESS || '0xceBD87246e91C7D70C82D5aE5C196a0028543933';
-    const rpcUrl = process.env.RPC_URL || process.env.AVALANCHE_RPC || 'https://api.avax-test.network/ext/bc/C/rpc';
-    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-    const contract = new ethers.Contract(contractAddress, MeetingAuctionABI, provider);
-
-    // Verify NFT ownership
-    try {
-      const owner = await contract.ownerOf(nftTokenId);
-      if (owner.toLowerCase() !== userWallet.toLowerCase()) {
-        return res.status(403).json({
-          success: false,
-          error: 'You do not own this NFT'
-        });
-      }
-    } catch (error) {
-      return res.status(404).json({
-        success: false,
-        error: 'NFT not found or does not exist'
-      });
-    }
-
-    // Check if NFT can be burned for meeting access
-    const canBurn = await contract.canBurnForMeeting(nftTokenId, userWallet);
-    if (!canBurn) {
-      return res.status(403).json({
-        success: false,
-        error: 'NFT cannot be used for meeting access. Meeting may not be scheduled or NFT already used.'
-      });
-    }
-
-    // Get meeting data from database
-    const meetingResult = await pool.query(`
-      SELECT 
-        m.jitsi_room_id,
-        m.room_url,
-        m.winner_access_token,
-        m.expires_at,
-        a.title,
-        a.description,
-        a.meeting_duration
-      FROM meetings m
-      JOIN auctions a ON m.auction_id = a.id
-      WHERE m.auction_id = $1
-    `, [auctionId]);
     
-    if (meetingResult.rows.length === 0) {
-      return res.status(404).json({
-        success: false,
-        error: 'Meeting not found for this auction'
-      });
-    }
+    // Generate meeting URLs
+    const hostUrl = jitsiService.generateMeetingUrl({
+      roomId,
+      token: hostToken,
+      userName: hostName,
+      userEmail: hostEmail
+    });
     
-    const meeting = meetingResult.rows[0];
+    const guestUrl = jitsiService.generateMeetingUrl({
+      roomId,
+      token: guestToken,
+      userName: guestName,
+      userEmail: guestEmail
+    });
     
-    // Check if meeting has expired
-    if (meeting.expires_at && new Date() > new Date(meeting.expires_at)) {
-      return res.status(410).json({
-        success: false,
-        error: 'Meeting has expired'
-      });
-    }
+    logger.info(`Direct meeting created: ${roomId} for ${hostEmail} and ${guestEmail}`);
     
     res.json({
       success: true,
       meeting: {
-        auctionId: auctionId,
-        nftTokenId: nftTokenId,
-        title: meeting.title,
-        description: meeting.description,
-        duration: meeting.meeting_duration,
-        meetingUrl: `${meeting.room_url}?jwt=${meeting.winner_access_token}`,
-        expiresAt: meeting.expires_at,
-        requiresBurn: true,
-        message: 'You can access this meeting. Note: Your NFT will be burned when you join.'
-      }
+        roomId,
+        name: meetingName,
+        duration,
+        expiresAt: new Date(Date.now() + duration * 60 * 1000).toISOString()
+      },
+      participants: {
+        host: {
+          name: hostName,
+          email: hostEmail,
+          url: hostUrl,
+          role: 'moderator',
+          token: hostToken
+        },
+        guest: {
+          name: guestName,
+          email: guestEmail,
+          url: guestUrl,
+          role: 'participant',
+          token: guestToken
+        }
+      },
+      note: 'Direct meeting created successfully. No authentication or database storage required.'
     });
     
   } catch (error) {
-    logger.error('Error accessing winner meeting:', error);
-    res.status(500).json({ 
-      success: false,
-      error: 'Failed to verify meeting access'
-    });
-  }
-});
-
-/**
- * Burn NFT and get final meeting access - Called after blockchain burn transaction
- */
-router.post('/burn-nft-access', authenticateToken, async (req, res) => {
-  try {
-    const { auctionId, nftTokenId, transactionHash } = req.body;
-    const userWallet = req.user.walletAddress;
-
-    if (!userWallet || !auctionId || !nftTokenId || !transactionHash) {
-      return res.status(400).json({
-        success: false,
-        error: 'All fields are required: auctionId, nftTokenId, transactionHash'
-      });
-    }
-
-    // Verify transaction on blockchain
-    const rpcUrl = process.env.RPC_URL || process.env.AVALANCHE_RPC || 'https://api.avax-test.network/ext/bc/C/rpc';
-    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-    
-    try {
-      const receipt = await provider.getTransactionReceipt(transactionHash);
-      
-      if (!receipt) {
-        return res.status(400).json({
-          success: false,
-          error: 'Transaction not found or not confirmed'
-        });
-      }
-
-      // Verify transaction was successful
-      if (receipt.status !== 1) {
-        return res.status(400).json({
-          success: false,
-          error: 'Transaction failed'
-        });
-      }
-
-      // Verify transaction is from the correct user
-      if (receipt.from.toLowerCase() !== userWallet.toLowerCase()) {
-        return res.status(403).json({
-          success: false,
-          error: 'Transaction not from your wallet'
-        });
-      }
-
-      // TODO: Add more sophisticated verification of burn event in transaction logs
-
-    } catch (error) {
-      return res.status(400).json({
-        success: false,
-        error: 'Failed to verify transaction'
-      });
-    }
-
-    // Check if this transaction has already been used
-    const existingLog = await pool.query(
-      'SELECT id FROM meeting_access_logs WHERE transaction_hash = $1',
-      [transactionHash]
-    );
-
-    if (existingLog.rows.length > 0) {
-      return res.status(409).json({
-        success: false,
-        error: 'This transaction has already been used'
-      });
-    }
-
-    // Get meeting data
-    const meetingResult = await pool.query(`
-      SELECT 
-        m.jitsi_room_id,
-        m.room_url,
-        m.winner_access_token,
-        m.expires_at,
-        a.title,
-        a.description,
-        a.meeting_duration
-      FROM meetings m
-      JOIN auctions a ON m.auction_id = a.id
-      WHERE m.auction_id = $1
-    `, [auctionId]);
-    
-    if (meetingResult.rows.length === 0) {
-      return res.status(404).json({
-        success: false,
-        error: 'Meeting not found'
-      });
-    }
-    
-    const meeting = meetingResult.rows[0];
-    
-    // Log the access
-    await pool.query(`
-      INSERT INTO meeting_access_logs (
-        auction_id, user_para_id, wallet_address, nft_token_id, 
-        transaction_hash, access_method
-      ) VALUES ($1, $2, $3, $4, $5, $6)
-    `, [
-      auctionId,
-      req.user.paraUserId,
-      userWallet,
-      nftTokenId,
-      transactionHash,
-      'nft_burn'
-    ]);
-
-    res.json({
-      success: true,
-      message: 'NFT burned successfully! You can now access the meeting.',
-      meeting: {
-        auctionId: auctionId,
-        title: meeting.title,
-        description: meeting.description,
-        duration: meeting.meeting_duration,
-        meetingUrl: `${meeting.room_url}?jwt=${meeting.winner_access_token}`,
-        expiresAt: meeting.expires_at
-      }
-    });
-
-  } catch (error) {
-    logger.error('Error processing NFT burn access:', error);
+    logger.error('Direct meeting creation error:', error);
     res.status(500).json({
-      success: false,
-      error: 'Failed to process NFT burn access'
-    });
-  }
-});
-
-/**
- * Get auction winner's NFTs - Helper to find which NFTs can be burned
- */
-router.get('/my-auction-nfts', authenticateToken, async (req, res) => {
-  try {
-    const userWallet = req.user.walletAddress;
-
-    if (!userWallet) {
-      return res.status(400).json({
-        success: false,
-        error: 'User wallet address not found'
-      });
-    }
-
-    // Initialize contract
-    const contractAddress = process.env.CONTRACT_ADDRESS || '0xceBD87246e91C7D70C82D5aE5C196a0028543933';
-    const rpcUrl = process.env.RPC_URL || process.env.AVALANCHE_RPC || 'https://api.avax-test.network/ext/bc/C/rpc';
-    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-    const contract = new ethers.Contract(contractAddress, MeetingAuctionABI, provider);
-
-    // Get NFTs owned by user
-    const [tokenIds, auctionIds] = await contract.getNFTsOwnedByUser(userWallet);
-
-    const nfts = [];
-    for (let i = 0; i < tokenIds.length; i++) {
-      const tokenId = tokenIds[i];
-      const auctionId = auctionIds[i];
-
-      // Get NFT metadata
-      const metadata = await contract.getNFTMetadata(tokenId);
-      
-      // Check if can burn for meeting
-      const canBurn = await contract.canBurnForMeeting(tokenId, userWallet);
-
-      // Get auction details from database
-      const auctionResult = await pool.query(
-        'SELECT title, description FROM auctions WHERE id = $1',
-        [auctionId.toString()]
-      );
-
-      const auctionData = auctionResult.rows[0];
-
-      nfts.push({
-        tokenId: tokenId.toString(),
-        auctionId: auctionId.toString(),
-        title: auctionData?.title || `Auction ${auctionId}`,
-        description: auctionData?.description || '',
-        hostTwitterId: metadata.hostTwitterId,
-        meetingDuration: metadata.meetingDuration.toString(),
-        mintTimestamp: metadata.mintTimestamp.toString(),
-        canBurnForMeeting: canBurn
-      });
-    }
-    
-    res.json({
-      success: true,
-      nfts: nfts,
-      total: nfts.length
-    });
-    
-  } catch (error) {
-    logger.error('Error fetching user NFTs:', error);
-    res.status(500).json({ 
-      success: false,
-      error: 'Failed to fetch NFTs'
+      error: 'Failed to create direct meeting',
+      details: error.message
     });
   }
 });

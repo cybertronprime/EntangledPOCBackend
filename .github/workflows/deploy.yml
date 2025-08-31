@@ -262,7 +262,7 @@ jobs:
           fi
 
   notify:
-    needs: [test, deploy]
+    needs: [deploy]
     runs-on: ubuntu-latest
     if: always()
     

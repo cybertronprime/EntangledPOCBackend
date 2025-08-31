@@ -243,9 +243,9 @@ jobs:
             
             # Health check
             echo "🏥 Performing health check..."
-            if curl -f http://localhost:5009/api/health > /dev/null 2>&1; then
+            if curl -f http://localhost:5009/health > /dev/null 2>&1; then
               echo "✅ APPLICATION DEPLOYED SUCCESSFULLY!"
-              echo "🌐 Backend API: http://${{ secrets.SERVER_HOST }}/api/health"
+              echo "🌐 Backend API: http://209.38.123.139/health"
             else
               echo "⚠️ Health check failed, checking logs..."
               pm2 logs entangle-backend --lines 10
@@ -271,7 +271,7 @@ jobs:
       run: |
         if [[ "${{ needs.deploy.result }}" == "success" ]]; then
           echo "✅ Deployment successful to server 209.38.123.139"
-          echo "🌐 Backend API: http://209.38.123.139/api/health"
+          echo "🌐 Backend API: http://209.38.123.139/health"
         else
           echo "❌ Deployment failed"
           exit 1

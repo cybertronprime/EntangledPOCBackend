@@ -5,9 +5,11 @@ const logger = require('../utils/logger');
 
 class ParaService {
   constructor() {
-    this.paraServer = new ParaServer(process.env.PARA_API_KEY);
-    this.secretApiKey = process.env.PARA_SECRET_API_KEY;
     this.environment = process.env.PARA_ENVIRONMENT || 'beta';
+    this.paraServer = new ParaServer(this.environment, {
+      apiKey: process.env.PARA_API_KEY
+    });
+    this.secretApiKey = process.env.PARA_SECRET_API_KEY;
     this.baseUrl = `https://api.${this.environment}.getpara.com`;
   }
   
@@ -73,7 +75,9 @@ class ParaService {
       }
       
       // Create new Para instance for this session (prevent conflicts)
-      const userParaServer = new ParaServer(process.env.PARA_API_KEY);
+      const userParaServer = new ParaServer(this.environment, {
+        apiKey: process.env.PARA_API_KEY
+      });
       
       logger.info('Importing Para session...');
       

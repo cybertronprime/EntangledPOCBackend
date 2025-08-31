@@ -26,7 +26,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
-        SOURCE: "backend/"
+        SOURCE: "./"
         REMOTE_HOST: 209.38.123.139
         REMOTE_USER: root
         TARGET: "/var/www/entangle-backend"

@@ -19,16 +19,14 @@ jobs:
         node-version: '20'
         
     - name: Install dependencies
-      run: |
-        cd backend
-        npm install
+      run: npm install
         
     - name: Deploy backend files
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
-        SOURCE: "backend/"
+        SOURCE: "./"
         REMOTE_HOST: 209.38.123.139
         REMOTE_USER: root
         TARGET: "/var/www/entangle-backend"
